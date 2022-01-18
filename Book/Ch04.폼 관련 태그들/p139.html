@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>폼 요소 그룹으로 묶이</title>
+        <style>
+        /* 속성선택자 */
+        input[id = mail]{
+            width: 150px;
+            height: 20px;
+            margin-top: 20px;
+        }
+        </style>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>개인정보</legend>
+            <ul>
+                <li>
+                    <label for="name">이름</label>
+                    <input type="text" id="name">
+                </li>
+                <li>
+                    <label for="mail">메일주소</label>
+                    <input type="text" id="mail">
+                </li>
+            </ul>
+        </fieldset>
+    </form>
+    
+</body>
+</html>
