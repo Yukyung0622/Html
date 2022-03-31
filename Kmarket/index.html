@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>케이마켓::대한민국 1등 쇼핑몰</title>
+    <link rel="stylesheet" href="./css/style.css"/>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            font: 12px 돋움;
+        }
+
+        ul, ol{
+            list-style: none;
+        }
+      
+        #main{
+            position: relative;
+            width: 1200px;
+            min-height: 600px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        section .left{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 215px;
+            height: 100%;
+        }
+        section .left > .category{
+            width: 100%;
+            padding: 0 0 10px;
+            background: #333949;
+            position: relative;
+            height: 425px;
+            box-sizing: border-box;
+        }
+        section .left > .category > li {
+            border-bottom: 1px solid #2b313f;
+            background: none;
+            text-align: left;
+            height: 40px;
+            font-weight: bold;
+            box-sizing: border-box;
+        }
+        section .left > .category > li > a{
+            display: block;
+            padding: 0 20px;
+            line-height: 40px;
+            color: #ccc;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 1em;
+        }
+
+        section.left > .category > li > ol {
+            display: none;
+            position: absolute;
+            left: 215px;
+            top: 0px;
+            z-index: 10000;
+            width: 215px;
+            height: 100%;
+            padding: 10px;
+            background: #fff;
+            border: 1px solid #787f89;
+            border-top: none;
+            box-sizing: border-box;
+        }
+
+        section.left > .category >li > ol > li {
+            height: 24px;
+        }
+        section .left > .category > li:first-child{
+            padding: 0 20px;
+            color: #fff;
+            line-height: 40px;
+        }
+        section.left > .category i {
+            display: inline-block;
+            width: 22px;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+        section.left > .category i.fa-angle-right{
+            float: right;
+            width: auto;
+            margin-right: 0;
+            margin-top: 10px;
+        }
+        section.left > .category i.fa-ang
+
+        
+
+        .fa, .fab, .fal, .far, .fas{
+            font-style: normal;
+            font-variant: normal;
+            text-rendering: auto;
+            line-height: 1;
+        }
+
+      
+        .fa, .far, .fas{
+            font-family: "Font Awesome 5 Free";
+        }
+
+        .fa, .fas{
+            font-weight: 900;
+        }
+        .fa-bars::before{
+            content: "\f0c9";
+            font-weight: 900;
+        }
+        .fa-angle-right::before{
+            content: "\f105";
+        }
+       
+
+        #main h1 > a{
+            display: inline-block;
+            font-weight: bold;
+            font-size: 1.5em;
+            font-family: 'Malgun Gothic', dotum, sans-serif;
+            margin: 10px;
+            padding: 0 0 7px;
+            border-bottom: 2px solid #000;
+            line-height: 1em;
+        }
+        #main section > article .thumb {
+            width: 100%;
+            height: 230px;
+            margin: 0px auto;
+            overflow: hidden;
+            text-align: center;
+        }
+        #main section > article h2{
+            font-family: 'Noto Sans KR', sans-serif;
+            font-size: 15px;
+            margin-top: 4px;
+            text-align: center;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        #main section > article p {
+            color: #222;
+            font-size: 12px;
+            line-height: 16px;
+            margin: 4px 0;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        #main section > article .org_price > del{
+            font-family: 'Noto Sans KR', sans-serif;
+            font-size: 12px;
+            color: #aaa;
+        }
+        #main section > article del::after{
+            content: "원";
+        }
+        #main section > article .org_price > span{
+            color: #eb000a;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-size: 12px;
+        }
+        #main section > article .org_price > span::after{
+            content: "↓";
+        }
+        #main section > article .dis_price{
+            margin-top: 4px;
+        }
+        #main section > article .dis_price > ins {
+            font-family: 'Noto Sans KR', sans-serif;
+            font-size: 14px;
+            text-decoration: none;
+        }
+        #main section >article ins::after{
+            content: "원";
+        }
+        #main section > article .dis_price > span{
+            display: inline-block;
+            font-size: 0;
+            vertical-align: text-bottom;
+            width: 55px;
+            height: 13px;
+            background: url('./img/ico_freeshipping.gif');
+        }
+    </style>
+</head>
+<body>    
+    <div id="wrapper">
+        <header>
+            <div class="top">
+                <div>
+                    <a href="#">로그인</a>
+                    <a href="#">회원가입</a>
+                    <a href="#">마이페이지</a>
+                    <a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;장바구니</a>
+                </div>
+            </div>
+            <div class="logo">
+                <div>
+                    <a href="#"><img src="./img/header_logo.png" alt="로고"/></a>
+                    <form action="#">
+                        <input type="text" name="search"/>
+                        <button><i class="fa fa-search"></i></button>
+                    </form>                
+                </div>
+                
+            </div>
+            <div class="menu">
+                <div>
+                    <ul>
+                        <li><a href="#">히트상품</a></li>
+                        <li><a href="#">추천상품</a></li>
+                        <li><a href="#">최신상품</a></li>
+                        <li><a href="#">인기상품</a></li>
+                        <li><a href="#">할인상품</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">쿠폰존</a></li>
+                        <li><a href="#">사용후기</a></li>
+                        <li><a href="#">개인결제</a></li>
+                        <li><a href="#">고객센터</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <main>
+            <aside></aside>
+            <section id="main">
+                <section class="left">
+                    <ul class="category">
+                        <li>
+                            <i class="fas fa-bars"></i>카테고리
+                        </li>
+                        <li>
+                            <a href="#" class>
+                                <i class="fas fa-tshirt"></i>패션·의류·뷰티
+                                <i class="fas fa-angle-right"></i>
+                            </a>
+                            <ol style="display: none;">
+                                <li><a href="#">남성의류</a></li>
+                                <li><a href="#">여성의류</a></li>
+                                <li><a href="#">잡화</a></li>
+                                <li><a href="#">뷰티</a></li>
+                            </ol>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-laptop"></i>가전·디지털
+                                <i class="fas fa-angle-right"></i>
+                            </a>
+                            <ol>
+                                <li><a href="#">노트북/PC</a></li>
+                                <li><a href="#">휴대폰</a></li>
+                                <li><a href="#">카메라</a></li>
+                                <li><a href="#">가전</a></li>
+                            </ol>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-utensils"></i>식품·생필품
+                                <i class="fas fa-angle-right"></i>
+                            </a>
+                            <ol>
+                                <li><a href="#">신선식품</a></li>
+                                <li><a href="#">가공식품</a></li>
+                                <li><a href="#">건강식품</a></li>
+                                <li><a href="#">생필품</a></li>
+                            </ol>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-home"></i>홈·문구·취미
+                                <i class="fas fa-angle-right"></i>
+                            </a>
+                            <ol style="display: none;">
+                                <li><a href="#">가구/DIY</a></li>
+                                <li><a href="#">침구·커튼</a></li>
+                                <li><a href="#">생활용품</a></li>
+                                <li><a href="#">사무용품</a></li>
+
+                            </ol>
+                        </li>
+                    </ul>
+                </section>
+                <section class="slider"></section>
+                <section class="hit">
+                    <h1><a href="#">히트상품</a></h1>
+                    <article>
+                        <div class="thumb"><img src="./img/thumb-sample-t1.jpg" alt="t1"></div>
+                        <h2>베이직 기모 레글런 차콜레드2 차콜레드2</h2>
+                        <p>신상 긴팔 티셔츠 / 남자옷 무지티 티셔츠 / 무지티 티셔츠</p>
+                        <div class="org_price">
+                            <del>
+                                30,000
+                            </del>
+                            <span>10%</span>
+                        </div>
+                        <div class="dis_price">
+                            <ins>27,000</ins>
+                            <span>무료배송</span>
+                        </div>
+                    </article>
+                    <article></article>
+                    <article></article>
+                    <article></article>
+                    <article></article>
+                    <article></article>
+                    <article></article>
+                    <article></article>
+                </section>
+                <section class="recomment">
+                    <h1><a href="#">추천상품</a></h1>
+                    <article></article>
+                    <article></article>
+                    <article></article>
+                    <article></article>
+                    <article></article>
+                    <article></article>
+                    <article></article>
+                    <article></article>
+                </section>
+                <section class="new">
+                    <h1><a href="#">최신상품</a></h1>
+                    <article></article>
+                    <article></article>
+                    <article></article>
+                    <article></article>
+                    <article></article>
+                    <article></article>
+                    <article></article>
+                    <article></article>
+                </section>
+                <section class="discount">
+                    <h1><a href="#">할인상품</a></h1>
+                    <article></article>
+                    <article></article>
+                    <article></article>
+                    <article></article>
+                    <article></article>
+                    <article></article>
+                    <article></article>
+                    <article></article>
+                </section>
+            </section>
+        </main>
+        <footer>
+            <ul>
+                <li><a href="#">회사소개</a></li>
+                <li><a href="#">서비스이용약관</a></li>
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">전자금융거래약관</a></li>
+            </ul>
+            <div>
+                <p><img src="./img/footer_logo.png" alt="로고"></p>
+                <p>
+                  <strong>(주)KMARKET</strong><br />
+                  부산시 강남구 테헤란로 152 (역삼동 강남파이낸스센터)<br />
+                  대표이사 : 홍길동<br />
+                  사업자등록번호 : 220-81-83676 사업자정보확인<br />
+                  통신판매업신고 : 강남 10630호 Fax : 02-589-8842
+                </p>
+                <p>
+                  <strong>고객센터</strong><br />
+                  Tel : 1234-5678 (평일 09:00~18:00)<br />
+                  스마일클럽/SVIP 전용 : 1522-5700 (365일 09:00~18:00)<br />
+                  경기도 부천시 원미구 부일로 223(상동) 투나빌딩 6층<br />
+                  Fax : 051-123-4567 | Mail : kmarket@kmarket.co.kr<br />
+                </p>
+              </div>              
+        </footer>
+        
+    </div>
+</body>
+</html>

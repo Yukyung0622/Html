@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <title>케이마켓::관리자리스트</title>
+    <!--admin 공통 스타일 -->
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        /*admin-product-list 스타일*/
+        nav{
+            display: block;
+        }
+        #admin-product-list{
+            float: right;
+            width: 80%;
+            min-height: 600px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        #admin-product-list nav {
+            position: relative;
+            width: 100%;
+            height: 46px;
+            margin-bottom: 16px;
+            border-bottom: 1px solid #c0c0c0;
+            box-sizing: border-box;
+        }
+
+        #admin-product-list nav > h3{
+            /*position: absolute;*/
+            left: 0;
+            bottom: 10px;
+            font-size: 20px;
+            font-weight: normal;
+        }
+
+        #admin-product-list nav > p{
+            position: absolute;
+            right: 0;
+            bottom: 10px;
+        }
+
+        #admin-product-list > article {
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+        }
+
+        #admin-product-list > article table{
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        #admin-product-list > article > section{
+            margin-bottom: 16px;
+        }
+
+        #admin-product-list > article > section > div{
+            margin-bottom: 10px;
+        }
+
+        #admin-product-list select{
+            width: 150px;
+            padding: 6px;
+            border: 1px solid #959595;
+            font-size: 13px;
+            background-color: #fefefe;
+            color: #333;
+            box-sizing: border-box;
+        }
+        
+        #admin-product-list input{
+            width: 200px;
+            padding: 6px;
+            border: 1px solid #959595;
+            font-size: 13px;
+            background-color: #fefefe;
+            color: #333;
+            vertical-align: middle;
+            box-sizing: border-box;
+        }
+
+        #admin-product-list > .product-list > section > table {
+            border-top: 2px solid #8798a3;
+        }
+        
+        #admin-product-list > .product-list > section > table tr > th {
+            padding: 10px 0;
+            background: #f6f6f6;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        #admin-product-list input[type=checkbox]{
+            width: auto;
+            margin-right: 6px;
+        }
+
+        #admin-product-list > .product-list > section > table tr > td{
+            background: #fff;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        #admin-product-list > .product-list > section > table tr > td:nth-child(1){
+            width: 20px;
+        }
+        #admin-product-list > .product-list > section > table tr > td:nth-child(2){
+            width: 80px;
+        }
+        #admin-product-list > .product-list > section > table tr > td:nth-child(3){
+            width: 80px;
+        }
+        #admin-product-list > .product-list > section > table tr > td:nth-child(4){
+            width: auto;
+            text-align: left;
+        }
+        #admin-product-list > .product-list > section > table tr > td:nth-child(5){
+            width: 80px;
+        }
+        #admin-product-list > .product-list > section > table tr > td:nth-child(6){
+            width: 80px;
+        }
+        #admin-product-list > .product-list > section > table tr > td:nth-child(7){
+            width: 80px;
+        }
+        #admin-product-list > .product-list > section > table tr > td:nth-child(8){
+            width: 80px;
+        }
+        #admin-product-list > .product-list > section > table tr > td:nth-child(9){
+            width: 80px;
+        }
+        #admin-product-list > .product-list > section > table tr > td:nth-child(10){
+            width: 80px;
+        }
+        #admin-product-list > .product-list > section > table tr > td:nth-child(11){
+            width: 100px;
+        }
+        
+        #admin-product-list > .product-list > section > table img.thumb {
+            width: 60px;
+        }
+
+        #admin-product-list > .product-list > section input[type=button]{
+            float: left;
+            width: 100px;
+            margin-top: 10px;
+        }
+
+        #admin-product-list > .product-list > .paging {
+            width: 100%;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+
+
+
+
+
+    </style>
+    <script src="https://kit.fontawesome.com/20962f3e4b.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./js/gng.js"></script>
+
+</head>
+<body>
+    <div id="admin-wrapper">
+        <header>
+            <div class="container">
+                <a href="#" class="logo"><img src="../img/admin_logo.png" alt="ADMINSTRATOR"></a>
+                <P>
+                    <Span>홍길동</Span>님 반갑습니다.
+                    <a href="#">HOME |</a>
+                    <a href="#">로그아웃 |</a>
+                    <a href="#">고객센터</a>
+                </P>
+            </div>
+
+        </header>
+        <main>
+            <aside>
+                <ul id="gnb">
+                    <li>
+                        <a href="#"><i class="fa fa-cogs" aria-hidden="true"></i>환경설정</a>
+                        <ol>
+                            <li><a href="#">기본환경설정</a></li>
+                            <li><a href="#">배너관리</a></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-store" aria-hidden="true"></i>상점관리</a>
+                        <ol>
+                            <li><a href="#">판매자현황</a></li>
+                            <li><a href="#">재고관리</a></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-users" aria-hidden="true"></i>회원관리</a>
+                        <ol>
+                            <li><a href="#">회원현황</a></li>
+                            <li><a href="#">포인트관리</a></li>
+                            <li><a href="#">비회원관리</a></li>
+                            <li><a href="#">접속자집계</a></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-box-open" aria-hidden="true"></i>상품관리</a>
+                        <ol>
+                            <li><a href="./product/list.html">상품현황</a></li>
+                            <li><a href="./product/register.html">상품등록</a></li>
+                            <li><a href="#">재고관리</a></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-credit-card" aria-hidden="true"></i>주문관리</a>
+                        <ol>
+                            <li><a href="#">주문현황</a></li>
+                            <li><a href="#">매출현황</a></li>
+                            <li><a href="#">결제관리</a></li>
+                            <li><a href="#">배송관리</a></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>게시판관리</a>
+                        <ol>
+                            <li><a href="#">게시한현황</a></li>
+                            <li><a href="#">고객문의</a></li>
+                        </ol>
+                    </li>
+                </ul>
+            </aside>
+            <section id="admin-product-list">
+                <nav>
+                    <h3>상품목록</h3>
+                    <p>
+                        HOME > 상품관리 >
+                        <strong>상품목록</strong>
+                    </p>
+                </nav>
+                <article class="product-list">
+                    <section>
+                        <div>
+                            <select name="search">
+                                <option value="search1">상품명</option>
+                                <option value="search1">상품코드</option>
+                                <option value="search1">제조사</option>
+                                <option value="search1">판매자</option>
+                            </select>
+                            <input type="text" name="search">
+                        </div>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th><input type="checkbox" name="all"></th>
+                                    <th>이미지</th>
+                                    <th>상품코드</th>
+                                    <th>상품명</th>
+                                    <th>판매가격</th>
+                                    <th>할인율</th>
+                                    <th>포인트</th>
+                                    <th>재고</th>
+                                    <th>판매자</th>
+                                    <th>조회</th>
+                                    <th>관리</th>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" name="상품코드"></td>
+                                    <td><img src="../img/sample_thumb.jpg" class="thumb"></td>
+                                    <td>201603292</td>
+                                    <td>FreeMovement BLUEFORCE</td>
+                                    <td>36,000</td>
+                                    <td>10</td>
+                                    <td>360</td>
+                                    <td>400</td>
+                                    <td>홍길동</td>
+                                    <td>126</td>
+                                    <td>
+                                        <a href="#">[삭제]</a>
+                                        <a href="#">[수정]</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" name="상품코드"></td>
+                                    <td><img src="../img/sample_thumb.jpg" class="thumb"></td>
+                                    <td>201603292</td>
+                                    <td>FreeMovement BLUEFORCE</td>
+                                    <td>36,000</td>
+                                    <td>10</td>
+                                    <td>360</td>
+                                    <td>400</td>
+                                    <td>홍길동</td>
+                                    <td>126</td>
+                                    <td>
+                                        <a href="#">[삭제]</a>
+                                        <a href="#">[수정]</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" name="상품코드"></td>
+                                    <td><img src="../img/sample_thumb.jpg" class="thumb"></td>
+                                    <td>201603292</td>
+                                    <td>FreeMovement BLUEFORCE</td>
+                                    <td>36,000</td>
+                                    <td>10</td>
+                                    <td>360</td>
+                                    <td>400</td>
+                                    <td>홍길동</td>
+                                    <td>126</td>
+                                    <td>
+                                        <a href="#">[삭제]</a>
+                                        <a href="#">[수정]</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <input type="button" value="선택삭제">
+                        <div class="paging">
+                            <span class="prev"><a href="#">&nbsp;이전</a></span>
+                            <span class="num">
+                                <a href="#" class="on">1</a>
+                                <a href="#">2</a>
+                                <a href="#">3</a>
+                                <a href="#">4</a>
+                                <a href="#">5</a>
+                                <a href="#">6</a>
+                                <a href="#">7</a>
+                            </span>
+                            <span class="next"><a href="#">다음&nbsp;</a></span>
+                        </div>
+                    </section>
+                </article>
+                <p class="ico info">
+                    <strong>Tip!</strong>
+                    전자상거래 등에서의 상품 등의 정보제공에 관한 고시에 따라 총 35개 상품군에 대해 상품 특성 등을 양식에 따라 입력할 수 있습니다.
+                </p>
+            </section>
+        </main>
+        <footer>
+            <p class="copyright">
+                Copyright ©kmarket.co.kr All rights reserved. KMARKET ADMINISTRATOR Version 5.4.1.2
+            </p>
+        </footer>
+    </div>
+    
+</body>
+</html>

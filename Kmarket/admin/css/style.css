@@ -1,0 +1,140 @@
+/**/
+/* 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    font: normal 12px '고딕';
+}
+
+ul, ol {list-style: none;}
+a {text-decoration: none; color: #111;}
+input, textarea {outline: none;}
+
+#adimin-wrapper {
+    width: 100%;
+    height: auto;
+}
+h3{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end:0px;
+}
+
+/*헤더*/
+header{
+    width: 100%;
+    height: 120px;
+    background: url('../img/admin_bg_header.jpg');
+}
+
+header > .container{
+    position: relative;
+    width: 1400px;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+header > div > .container{
+    border-left: 1px solid #c0c0c0;
+}
+
+
+header  > div > .logo {
+    display: block;
+    margin-top: 40px;
+}
+header > div > p {
+    position: absolute;
+    right: 0;
+    bottom: 60px;
+    color: #fff;
+}
+header > div > p > span {
+    margin-right: 10px;
+}
+header > div > p > a {
+    color: #fff;
+}
+
+/*푸터*/
+footer{
+    width: 100%;
+    height: 60px;
+    background: #0d3a46;
+}
+footer > .copyright{
+    color: #fff;
+    float: left;
+    margin-top: 20px;
+}
+
+/*메인*/
+main{
+    width: 1400px;
+    min-height: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+main > aside{
+    float: left;
+    width: 270px;
+    height: 100%;
+    border-left: 1px solid #c0c0c0;
+    box-sizing: border-box;
+    background-image: url('../img/admin_bg_aside.jpg');
+}
+main > section{
+    float: right;
+    width: 1130px;
+    min-height: 600px;
+}
+
+/*gnb(global navigation bar)*/
+#gnb{
+    width: 100%;
+    height: auto;
+}
+#gnb > li{
+    width: 100%;
+    min-height: 66px;
+    border-top: 1px solid #c0c0c0;
+    box-sizing: border-box;
+}
+
+#gnb > li:last-child{border-bottom: 1px solid #c0c0c0;}
+#gnb > li > a{
+    display: block;
+    width: 100%;
+    height: 66px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #222;
+    line-height: 66px;
+    text-indent: 12px;
+}
+
+#gnb > li > a >i{
+    font-size: 20px;
+    margin-right: 12px;
+}
+
+#gnb ol{
+    display: none;
+    width: 100%;
+    height: auto;
+}
+#gnb ol > li{
+    width: 100%;
+    height: 32px;
+}
+#gnb ol > li > a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-indent: 56px;
+}
+
+#gnb ol > li > a:hover{font-weight: bold;}
